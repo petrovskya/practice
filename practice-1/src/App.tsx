@@ -38,8 +38,8 @@ export const App = () => {
         gridTemplateRows: '1fr 200px',
       }}
     >
-      <Header name={user.name} userName={user.username} email={user.email} />
-      <Main userGeoInfo={user.address} />
+      <Header userInfo={user} />
+      <Main userLocation={user.address.geo} />
       <Aside userAddressInfo={user.address} />
       <Footer userCompanyInfo={user.company} />
     </div>

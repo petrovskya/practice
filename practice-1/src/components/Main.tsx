@@ -1,17 +1,16 @@
 import React from 'react';
 import { UserMap } from './UserMap';
-import { UserAddress } from '../types';
+import { UserGeo } from '../types';
 
-type UserAddressPreview = Pick<UserAddress, 'geo'>;
-interface UserGeoProps {
-  userGeoInfo: UserAddressPreview;
+interface MainProps {
+  userLocation: UserGeo;
 }
 
-export const Main = ({ userGeoInfo: { geo } }: UserGeoProps) => {
+export const Main = ({ userLocation }: MainProps) => {
   return (
     <div style={{ backgroundColor: 'lightcoral', padding: 10 }}>
       <h1 style={{ fontFamily: 'monospace' }}>Component: MAIN</h1>
-      <UserMap userGeoInfo={geo} />
+      <UserMap userGeoInfo={userLocation} />
     </div>
   );
 };
